@@ -1,16 +1,81 @@
-# React + Vite
+🎲 Dice Game (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and fun dice-rolling game built using React and React Router.
+The user selects a number (1–6), rolls a dice, and earns or loses points based on the result.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Choose a number between 1 and 6
 
-## React Compiler
+Roll the dice and get a random outcome
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Score increases if the guess is correct, decreases if wrong
 
-## Expanding the ESLint configuration
+Reset score anytime
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clean two-page navigation using React Router
+
+📁 Project Structure
+src/
+│
+├── App.js
+├── components/
+│   ├── StartGame.js
+│   └── GamePage.js
+├── Images/
+│   ├── die.png
+│   ├── dice1.png ... dice6.png
+│
+├── StartGame.css
+├── GamePage.css
+
+🧭 Navigation
+
+This project uses react-router-dom:
+
+/ → Start Game page
+
+/game → Main game page
+
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<StartGame />} />
+    <Route path="/game" element={<GamePage />} />
+  </Routes>
+</BrowserRouter>
+
+🕹️ How to Play
+
+Click Start Game on the home screen.
+
+Select a number from 1 to 6.
+
+Press Roll Dice.
+
+If your selected number matches the dice roll → Score increases.
+Otherwise → Score decreases.
+
+Use Reset to set score back to 0.
+
+📦 Installation & Setup
+# Clone the repository
+git clone <your-repo-url>
+
+# Navigate into the project
+cd dice-game
+
+# Install dependencies
+npm install
+
+# Start the app
+npm start
+
+🧰 Tech Used
+
+React
+
+React Router
+
+useState Hook
+
+Basic CSS for styling

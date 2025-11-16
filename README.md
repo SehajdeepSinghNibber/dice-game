@@ -19,12 +19,14 @@ src/
 ├── components/
 │   ├── StartGame.js
 │   └── GamePage.js
+│   └── StartGame.js
+│   └── GamePage.css
+├── StartGame.css
+├── GamePage.css
 ├── Images/
 │   ├── die.png
 │   ├── dice1.png ... dice6.png
 │
-├── StartGame.css
-├── GamePage.css
 ```
 
 ## 🧭 Navigation
@@ -112,7 +114,3 @@ Both files include responsive design to ensure the game works well on different 
 - Add sound effects for dice rolls
 - Create a timer-based challenge mode
 - Add animations for dice rolling
-
-## 📄 License
-
-This project is open source and available under the MIT Licens

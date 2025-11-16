@@ -1,0 +1,43 @@
+.right, .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-game {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+}
+
+.right img {
+  margin-top: 10px;
+  width: 600px;
+  height: auto;
+  animation: float 2s ease-in-out infinite;
+}
+
+.left h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.left button {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+
+.left button:hover {
+  opacity: 0.75;;
+}
+

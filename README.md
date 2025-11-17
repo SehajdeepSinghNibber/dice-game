@@ -66,7 +66,7 @@ cd dice-game
 npm install
 
 # Start the app
-npm start
+npm run dev
 ```
 
 The app will open at `http://localhost:3000` in your browser.

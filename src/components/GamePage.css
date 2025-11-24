@@ -57,3 +57,54 @@ button {
 button:hover {
   opacity: 0.75;
 }
+
+.rules-box {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #222;
+  border-radius: 10px;
+  background-color: white;
+  text-align: left;
+  font-size: 1.1rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.rules-box h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+.rules-box ul {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+.rules-box li {
+  margin: 8px 0;
+}
+
+.choices-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.choice-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choice-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.choice-box img {
+  width: 100px;
+  height: 100px;
+}

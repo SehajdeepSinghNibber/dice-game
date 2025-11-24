@@ -10,10 +10,23 @@ import './GamePage.css';
 
 const diceImages = [dice1, dice2, dice3, dice4, dice5, dice6];
 
+const rules = {
+  1: "Select a number from 1 to 6.",
+  2: "Click the Roll Dice button.",
+  3: "If your selected number equals the dice result, you gain points equal to that number.",
+  4: "If it does not match, you lose the same amount.",
+  5: "Reset button sets score back to 0."
+};
+
 function GamePage() {
   const [img, setImg] = useState(diceImage);
   const [score, setScore] = useState(0);
   const [selected, setSelected] = useState(null);
+  const [ruleSelected, setRuleSelected] = useState(false);
+
+  const handleModeToggle = () => {
+  setRuleSelected(prev => !prev);
+};
 
   const rollDice = () => {
 
@@ -52,8 +65,19 @@ function GamePage() {
         ))}
       </div>
 
-      <div className="dice-image">
-        <img src={img} alt="dice" />
+      <div className="choices-row">
+        <div className="choice-box">
+          <h3>Your Choice</h3>
+          <img
+            src={selected === null ? diceImage : diceImages[selected - 1]}
+            alt="your choice"
+          />
+        </div>
+
+        <div className="choice-box">
+          <h3>Computer Choice</h3>
+          <img src={img} alt="dice result" />
+        </div>
       </div>
 
       <button className="roll-btn" onClick={rollDice}>
@@ -63,6 +87,17 @@ function GamePage() {
       <button className="reset-btn" onClick={() => setScore(0)}>
         Reset
       </button>
+      <button className="reset-btn" onClick={handleModeToggle}>Rules</button>
+      {ruleSelected && (
+        <div className="rules-box">
+          <h2>Game Rules</h2>
+          <ul>
+            {Object.values(rules).map((rule, index) => (
+              <li key={index}>{rule}</li>
+            ))}
+          </ul>
+        </div>
+      )}
 
     </div>
   );
